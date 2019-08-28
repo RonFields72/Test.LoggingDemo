@@ -25,6 +25,7 @@ namespace Test.LoggingDemo
         {
             return Host.CreateDefaultBuilder(args)
                 /// if using a 3rd party logger this is where it would be configured (Serilog, Nlog, ELMAH, etc.)
+                /// since they also use ILogger nothing else would chnage except for the configuration
                 .ConfigureLogging((context, logging) =>
                 {
                     logging.ClearProviders();
